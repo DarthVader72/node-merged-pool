@@ -36,7 +36,7 @@
         "url": "https://github.com/energicryptocurrency/node-merged-pool.git"
     },
     "dependencies": {
-	"unomp-multi-hashing": "git://github.com/narek-h/node-multi-hashing",
+	"unomp-multi-hashing": "git://git.energi.software:energi/cryptocurrency/mining-pool/node-multi-hashing",
         "bignum": "*",
         "base58-native": "*",
         "async": "*",
