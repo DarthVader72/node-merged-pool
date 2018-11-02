@@ -1,5 +1,8 @@
+
+# WARNING: this module is targeted only at Energi (NRG) Cryptocurrency at the moment
+
 High performance Stratum poolserver in Node.js. One instance of this software can startup and manage multiple coin
-pools, each with their own daemon and stratum ports :)
+pools, each with their own daemon and stratum ports.
 
 This software has been modefied for merged mining. It is still in development.
 
@@ -32,35 +35,12 @@ Features
 * When started with a coin daemon that hasn't finished syncing to the network it shows the blockchain download progress and initializes once synced
 
 #### Hashing algorithms supported:
-* ✓ __SHA256__ (Bitcoin, Peercoin/PPCoin, Terracoin, etc..)(I've gotten reports Freicoin is not working)
-* ✓ __Scrypt__ (Litecoin, Dogecoin, Feathercoin, etc..)
-* ✓ __Scrypt-Jane__ (YaCoin, CopperBars, Pennies, Tickets, etc..)
-* ✓ __Scrypt-N__ (Vertcoin [VTC])
-* ✓ __Quark__ (Quarkcoin [QRK])
-* ✓ __X11__ (Darkcoin [DRK], Hirocoin, Limecoin)
-* ✓ __X13__ (MaruCoin, BoostCoin)
-* ✓ __NIST5__ (Talkcoin)
-* ✓ __Keccak__ (Maxcoin [MAX], HelixCoin, CryptoMeth, Galleon, 365coin, Slothcoin, BitcointalkCoin)
-* ✓ __Skein__ (Skeincoin [SKC])
-* ✓ __Groestl__ (Groestlcoin [GRS])
-
-May be working (needs additional testing):
-* ? *Blake* (Blakecoin [BLC])
-* ? *Fugue* (Fuguecoin [FC])
-* ? *Qubit* (Qubitcoin [Q2C], Myriadcoin [MYR])
-* ? *SHAvite-3* (INKcoin [INK])
-* ? *Sha1* (Sha1coin [SHA], Yaycoin [YAY])
-
-Not working currently:
-* *Groestl* - for Myriadcoin
-* *Keccak* - for eCoin & Copperlark
-* *Hefty1* (Heavycoin [HVC])
-
+* ✓ __NRGHash__ (Energi (NRG))
 
 Requirements
 ------------
-* node v0.12+
-* coin daemon for primay and auxillery coins (preferably one with a relatively updated API and not some crapcoin :p)
+* node v0.12+, tested with v10
+* coin daemon for primary and auxiliary coins
 
 
 Example Usage
@@ -103,10 +83,10 @@ var myCoin = {
 If you are using the `scrypt-jane` algorithm there are additional configurations:
 
 ```javascript
-var myCoin = {
-    "name": "Freecoin",
-    "symbol": "FEC",
-    "algorithm": "scrypt-jane",
+const myCoin = {
+    "name": "Energi",
+    "symbol": "NRG",
+    "algorithm": "nrghash",
     "chainStartTime": 1375801200, //defaults to 1367991200 (YACoin) if not used
     "nMin": 6, //defaults to 4 if not used
     "nMax": 32 //defaults to 30 if not used
@@ -356,19 +336,6 @@ Credits
 * [ahmedbodi](//github.com/ahmedbodi/stratum-mining) - more algo adaptions to python code
 * [steveshit](//github.com/steveshit) - ported X11 hashing algo from python to node module
 
-
-Donations
----------
-To support development of this project to the original author (zone117x), feel free to donate :)
-
-* BTC: `1KRotMnQpxu3sePQnsVLRy3EraRFYfJQFR`
-* LTC: `LKfavSDJmwiFdcgaP1bbu46hhyiWw5oFhE`
-* VTC: `VgW4uFTZcimMSvcnE4cwS3bjJ6P8bcTykN`
-* MAX: `mWexUXRCX5PWBmfh34p11wzS5WX2VWvTRT`
-* QRK: `QehPDAhzVQWPwDPQvmn7iT3PoFUGT7o8bC`
-* DRK: `XcQmhp8ANR7okWAuArcNFZ2bHSB81jpapQ`
-* DOGE: `DBGGVtwAAit1NPZpRm5Nz9VUFErcvVvHYW`
-* Cryptsy Trade Key: `254ca13444be14937b36c44ba29160bd8f02ff76`
 
 License
 -------

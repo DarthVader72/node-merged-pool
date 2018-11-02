@@ -1,49 +1,19 @@
-var Stratum = require('./lib/index.js');
+const Stratum = require('./lib/index.js');
 
-var myCoin = {
-    "name": "Catcoin",
-    "symbol": "CTC",
-    "algorithm": "scrypt"
+const nrgCoin = {
+    "name": "Energi",
+    "symbol": "NRG",
+    "algorithm": "nrghash"
 };
 
-var myAuxCoins = [{
-    "name": "LottoShares",
-    "symbol": "LTS",
-    "algorithm": "scrypt",
+const pool = Stratum.createPool({
 
-    /*  */
-    "daemons": [
-        {   //Main daemon instance
-            "host": "127.0.0.1",
-            "port": 23327, // **NOT ACTUAL PORT**
-            "user": "lottosharesrpc",
-            "password": "By66dCmyX44uUbA7P3qqXJQeT3Ywd8dZ4dJdfgxCAxbg"
-        }
-	],
-},	{
-	"name": "Syscoin",
-	"symbol": "SYS",
-	"algorithm": "scrypt",
+    "coin": nrgCoin,
 
-	/*  */
-	"daemons": [
-		{   //Main daemon instance
-	    	"host": "127.0.0.1",
-	        "port": 23327, // **NOT ACTUAL PORT**
-	        "user": "syscoinrpc",
-	        "password": "By66dCmyX44uUbA7P3qqXJQeT3Ywd8dZ4dJdfgxCAxbg"
-	    }
-	],
-}];
-
-var pool = Stratum.createPool({
-
-    "coin": myCoin,
-
-    "auxes": myAuxCoins,
+    "auxes": [],
 
     // Payout address - for primary node only
-    "address": "9iKR9FwwEbWCiU3ZhCAs5dQRVkYoC288Go", //Address to where block rewards are given;
+    "address": "123...", //Address to where block rewards are given;
     // shared between all coins, so copy your private key over with dumpprivkey and importprivkey
 
     /* Block rewards go to the configured pool wallet address to later be paid out to miners,
@@ -53,7 +23,7 @@ var pool = Stratum.createPool({
     "rewardRecipients": {
         /* 0.1% donation to NOMP. This pubkey can accept any type of coin, please leave this in
            your config to help support NOMP development. */
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "123...": 0.1
     },
 
     "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
@@ -95,7 +65,7 @@ var pool = Stratum.createPool({
        be configured to use its own pool difficulty and variable difficulty settings. varDiff is
        optional and will only be used for the ports you configure it for. */
     "ports": {
-        "3032": { //A port for your miners to connect to
+        "8080": { //A port for your miners to connect to
             "diff": 32, //the pool difficulty for this port
 
             /* Variable difficulty is a feature that will automatically adjust difficulty for
@@ -124,9 +94,9 @@ var pool = Stratum.createPool({
     "daemons": [
         {   //Main daemon instance
             "host": "127.0.0.1",
-            "port": 9932,
-            "user": "catcoinrpc",
-            "password": "74QL5rZ9h8xZbLmwdNzW3cBRjJNQ6fy3b8pB5bJ6oURF"
+            "port": 9796,
+            "user": "energirpc",
+            "password": "somepassword"
         }
     ],
 
@@ -143,7 +113,7 @@ var pool = Stratum.createPool({
         "host": "127.0.0.1",
 
         /* Port configured for daemon (this is the actual peer port not RPC port) */
-        "port": 19333,
+        "port": 9797,
 
         /* If your coin daemon is new enough (i.e. not a shitcoin) then it will support a p2p
            feature that prevents the daemon from spamming our peer node with unnecessary
