@@ -1,0 +1,12 @@
+{
+  "name": "@energicryptocurrency/merged-pool",
+  "version": "1.0.0",
+  "vcs": "git",
+  "rms": "npm",
+  "rmsRepo": "https://www.npmjs.com",
+  "toolTune": {
+    "npm": {
+      "access": "public"
+    }
+  }
+}
