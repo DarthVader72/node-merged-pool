@@ -1,49 +1,49 @@
 {
-    "name": "@energicryptocurrency/merged-pooler",
-    "version": "1.0.0",
-    "description": "High performance Stratum poolserver in Node.js for merged mining",
-    "keywords": [
-        "stratum",
-        "merged",
-        "mining",
-        "pool",
-        "server",
-        "poolserver",
-        "bitcoin",
-        "litecoin",
-        "scrypt",
-        "multipool",
-        "multicoin",
-        "energi"
-    ],
-    "homepage": "https://github.com/energicryptocurrency/node-merged-pool",
-    "bugs": {
-        "url": "https://github.com/energicryptocurrency/node-merged-pool/issues"
-    },
-    "license": "GPL-2.0",
-    "author": "Daniel Beal",
-    "contributors": [
-        "Energi core team",
-        "zone117x",
-        "vekexasia",
-        "TheSeven",
-        "sigwo",
-        "infernoman"
-    ],
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/energicryptocurrency/node-merged-pool.git"
-    },
-    "dependencies": {
-        "@energicryptocurrency/unomp-multi-hashing": "*",
-        "bignum": "*",
-        "base58-native": "*",
-        "async": "*",
-        "redis": "*",
-        "writeuint64be": "*"
-    },
-    "engines": {
-        "node": ">=0.10"
-    }
+  "name": "@energicryptocurrency/merged-pooler",
+  "version": "1.1.0",
+  "description": "High performance Stratum poolserver in Node.js for merged mining",
+  "keywords": [
+    "stratum",
+    "merged",
+    "mining",
+    "pool",
+    "server",
+    "poolserver",
+    "bitcoin",
+    "litecoin",
+    "scrypt",
+    "multipool",
+    "multicoin",
+    "energi"
+  ],
+  "homepage": "https://github.com/energicryptocurrency/node-merged-pool",
+  "bugs": {
+    "url": "https://github.com/energicryptocurrency/node-merged-pool/issues"
+  },
+  "license": "GPL-2.0",
+  "author": "Daniel Beal",
+  "contributors": [
+    "Energi core team",
+    "zone117x",
+    "vekexasia",
+    "TheSeven",
+    "sigwo",
+    "infernoman"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/energicryptocurrency/node-merged-pool.git"
+  },
+  "dependencies": {
+    "@energicryptocurrency/unomp-multi-hashing": "*",
+    "bignum": "*",
+    "base58-native": "*",
+    "async": "*",
+    "redis": "*",
+    "writeuint64be": "*"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
 }
