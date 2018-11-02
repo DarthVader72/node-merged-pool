@@ -1,10 +1,10 @@
 {
-    "name": "merged-pooler",
+    "name": "@energicryptocurrency/merged-pooler",
     "version": "1.0.0",
     "description": "High performance Stratum poolserver in Node.js for merged mining",
     "keywords": [
         "stratum",
-	"merged",
+        "merged",
         "mining",
         "pool",
         "server",
@@ -14,7 +14,7 @@
         "scrypt",
         "multipool",
         "multicoin",
-	"energi"
+        "energi"
     ],
     "homepage": "https://github.com/energicryptocurrency/node-merged-pool",
     "bugs": {
@@ -23,8 +23,8 @@
     "license": "GPL-2.0",
     "author": "Daniel Beal",
     "contributors": [
-	"Energi core team",
-	"zone117x",
+        "Energi core team",
+        "zone117x",
         "vekexasia",
         "TheSeven",
         "sigwo",
@@ -36,7 +36,7 @@
         "url": "https://github.com/energicryptocurrency/node-merged-pool.git"
     },
     "dependencies": {
-	"unomp-multi-hashing": "git://github.com/energicryptocurrency/node-multi-hashing",
+        "@energicryptocurrency/unomp-multi-hashing": "*",
         "bignum": "*",
         "base58-native": "*",
         "async": "*",
