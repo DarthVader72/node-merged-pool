@@ -1,5 +1,5 @@
 {
-  "name": "@energicryptocurrency/merged-pooler",
+  "name": "@energicryptocurrency/merged-pool",
   "version": "1.1.0",
   "description": "High performance Stratum poolserver in Node.js for merged mining",
   "keywords": [
